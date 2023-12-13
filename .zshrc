@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias kubectl="minikube kubectl --"
+alias kc="kubectl"
 
 [[ ! $TERM =~ (screen|dumb) ]] && exec tmux
 
@@ -117,4 +117,9 @@ eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
 
+export PATH=$PATH:/usr/local/go/bin
 
+export PATH=$PATH:/opt/amdgpu-pro/bin:/opt/amdgpu/bin
+
+export OPENFAAS_URL=http://openfaas.space.local:8080
+export OPENFAAS_PREFIX=registry.space.local:5000
